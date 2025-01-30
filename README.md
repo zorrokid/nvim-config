@@ -5,6 +5,7 @@ lead key: \
 ## shortcuts with lead:
 
 n   Toggle NERDTree
+rn  Rename 
 
 # Rust-specific
 

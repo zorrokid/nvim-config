@@ -16,6 +16,15 @@ vim.keymap.set("n", "K",  -- Override Neovim's built-in hover keymap with rustac
   { silent = true, buffer = bufnr }
 )
 
+vim.keymap.set("n", "K",  -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
+  function()
+    vim.cmd.RustLsp({'hover', 'actions'})
+  end,
+  { silent = true, buffer = bufnr }
+)
+
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { silent = true, buffer = true })
+
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { buffer = true })
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { buffer = true })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { buffer = true })
