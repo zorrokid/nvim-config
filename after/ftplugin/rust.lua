@@ -41,3 +41,9 @@ vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = true, silent = true
 -- Go to type definition
 vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, { buffer = true, silent = true })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.rs",
+	callback = function()
+		vim.lsp.buf.format()
+	end
+})

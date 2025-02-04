@@ -27,3 +27,10 @@ gd  go to definition
 gi  go to implementation
 gr  find references
 gT  go to type definition
+
+## completion
+
+Selecting a completion:
+<C-n>   next completion
+<C-p>   previous completion
+<CR>    confirm completion
